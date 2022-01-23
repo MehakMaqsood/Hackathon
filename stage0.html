@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" href="images/rnt_favicon.png" />
+    <link rel="stylesheet" href="rnt_styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        margin: 5em auto;
+      }
+
+      body {
+        background-image: url("https://cdn.discordapp.com/attachments/930188955712884746/934754241594155038/The_year_is_1912_sometime_in_the_spring._You_slowly_open_your_eyes_only_to_close_them_again_as_the_harsh_sun_greets_you._All_you_can_tell_from_your_spot_deep_in_the_sand_is_that_its_daytime_and_the_water_is_notably.png") !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1 style="font-size: 50px"></h1>
+        <h4><strong></strong></h4>
+        <a href="{{url_for('stage1')}}">
+          <img
+            src="https://cdn.discordapp.com/attachments/930188955712884746/934739693826887730/choice_button_2.png"
+            alt="Click to Start the Adventure!"
+            title="Click to Start the Adventure!"
+            class="button"
+            height="50px"
+          />
+        </a>
+      </div>
+    </div>
+
+    {% block content %} {% endblock %}
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

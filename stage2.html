@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" href="images/rnt_favicon.png" />
+    <link rel="stylesheet" href="rnt_styles.css" />
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .button {
+        padding: 15px 25px;
+        font-size: 50px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        background-color: #7fffd4;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+      }
+      .button:hover {
+        background-color: #e0ffff;
+      }
+
+      .button:active {
+        background-color: #008b8b;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+      #exit {
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin-left: auto;
+        margin-right: 300;
+      }
+
+      body {
+        background-image: url("https://cdn.discordapp.com/attachments/930188955712884746/934774537860571156/pic2_2.png") !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="controlBar" style="-webkit-app-region: drag">
+      <div id="exit"></div>
+    </div>
+    <button class="button">Try to signal for help</button>
+    <button class="button">Attempt to build a shelter and gather food</button>
+    <a href="{{url_for('stage1')}}">
+      <img
+        src="https://cdn.discordapp.com/attachments/930188955712884746/934739693826887730/choice_button_2.png"
+        alt="Click to Start the Adventure!"
+        class="button"
+        height="50px"
+      />
+    </a>
+    {% block content %} {% endblock %}
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
